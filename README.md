@@ -5,6 +5,8 @@
 
 Inference of [Facebook's LLaMA](https://github.com/facebookresearch/llama) model in pure C/C++
 
+LLaMA supports 2048 tokens. https://github.com/facebookresearch/llama/issues/148#issuecomment-1459056594
+
 **Hot topics:**
 
 - Cache input prompts for faster initialization: https://github.com/ggerganov/llama.cpp/issues/64
