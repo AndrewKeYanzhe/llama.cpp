@@ -21,6 +21,8 @@ The main goal is to run the model using 4-bit quantization on a MacBook
 - 4-bit quantization support
 - Runs on the CPU
 
+The 7B model is able to run on a Macbook Air M1 with 8GB of ram.
+
 This was [hacked in an evening](https://github.com/ggerganov/llama.cpp/issues/33#issuecomment-1465108022) - I have no idea if it works correctly.
 Please do not make conclusions about the models based on the results from this implementation.
 For all I know, it can be completely wrong. This project is for educational purposes.
@@ -138,7 +140,7 @@ make
 ls ./models
 65B 30B 13B 7B tokenizer_checklist.chk tokenizer.model
 
-# install Python dependencies
+# install Python dependencies. Python 3.9 works
 python3 -m pip install torch numpy sentencepiece
 
 # convert the 7B model to ggml FP16 format
@@ -160,7 +162,7 @@ TODO: add model disk/mem requirements
 If you want a more ChatGPT-like experience, you can run in interactive mode by passing `-i` as a parameter.
 In this mode, you can always interrupt generation by pressing Ctrl+C and enter one or more lines of text which will be converted into tokens and appended to the current context. You can also specify a *reverse prompt* with the parameter `-r "reverse prompt string"`. This will result in user input being prompted whenever the exact tokens of the reverse prompt string are encountered in the generation. A typical use is to use a prompt which makes LLaMa emulate a chat between multiple users, say Alice and Bob, and pass `-r "Alice:"`.
 
-Here is an example few-shot interaction, invoked with the command
+Here is an example few-shot interaction, invoked with the following command (Note that 13B model is used here)
 ```
 ./main -m ./models/13B/ggml-model-q4_0.bin -t 8 -n 256 --repeat_penalty 1.0 --color -i -r "User:" \
                                            -p \
