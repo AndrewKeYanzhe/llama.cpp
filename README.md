@@ -7,7 +7,7 @@ Inference of [Facebook's LLaMA](https://github.com/facebookresearch/llama) model
 
 LLaMA supports 2048 tokens. https://github.com/facebookresearch/llama/issues/148#issuecomment-1459056594
 
-llama.cpp supports 512 tokens in the default configuration as of 14 March 23.
+llama.cpp supports 512 tokens as of 14 March 23.
 > Depending on how much memory you have you can increase the context size to get longer outputs. On a 64gb machine I was able to have a 12k context with the 7B model and 2k context with the 65B model. You can change it [here](https://github.com/ggerganov/llama.cpp/blob/460c48254098b28d422382a2bbff6a0b3d7f7e17/main.cpp#L794)
 
 _Originally posted by @eous in https://github.com/ggerganov/llama.cpp/issues/71#issuecomment-1465496459_
