@@ -7,7 +7,7 @@ Inference of [Facebook's LLaMA](https://github.com/facebookresearch/llama) model
 
 LLaMA supports 2048 tokens. https://github.com/facebookresearch/llama/issues/148#issuecomment-1459056594
 
-llama.cpp supports 512 tokens in the default configuration
+llama.cpp supports 512 tokens in the default configuration as of 14 March 23.
 > Depending on how much memory you have you can increase the context size to get longer outputs. On a 64gb machine I was able to have a 12k context with the 7B model and 2k context with the 65B model. You can change it [here](https://github.com/ggerganov/llama.cpp/blob/460c48254098b28d422382a2bbff6a0b3d7f7e17/main.cpp#L794)
 
 _Originally posted by @eous in https://github.com/ggerganov/llama.cpp/issues/71#issuecomment-1465496459_
@@ -169,7 +169,11 @@ TODO: add model disk/mem requirements
 If you want a more ChatGPT-like experience, you can run in interactive mode by passing `-i` as a parameter.
 In this mode, you can always interrupt generation by pressing Ctrl+C and enter one or more lines of text which will be converted into tokens and appended to the current context. You can also specify a *reverse prompt* with the parameter `-r "reverse prompt string"`. This will result in user input being prompted whenever the exact tokens of the reverse prompt string are encountered in the generation. A typical use is to use a prompt which makes LLaMa emulate a chat between multiple users, say Alice and Bob, and pass `-r "Alice:"`.
 
-Here is an example few-shot interaction, invoked with the following command (Note that 13B model is used here)
+Here is an example few-shot interaction, invoked with the following command. 
+Notes: 
+13B model is used here.
+`-n` sets the token limit.
+
 ```
 ./main -m ./models/13B/ggml-model-q4_0.bin -t 8 -n 256 --repeat_penalty 1.0 --color -i -r "User:" \
                                            -p \
