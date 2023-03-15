@@ -1,9 +1,6 @@
 # llama.cpp
 
-[![Actions Status](https://github.com/ggerganov/llama.cpp/workflows/CI/badge.svg)](https://github.com/ggerganov/llama.cpp/actions)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-Inference of [Facebook's LLaMA](https://github.com/facebookresearch/llama) model in pure C/C++
+##### Fork of ggerganov and Facebook Research's work on LLaMA, with additional documentation. Tested on Macbook Air M1 8GB.
 
 LLaMA supports 2048 tokens. https://github.com/facebookresearch/llama/issues/148#issuecomment-1459056594
 
@@ -11,6 +8,15 @@ llama.cpp supports 512 tokens as of 14 March 23.
 > Depending on how much memory you have you can increase the context size to get longer outputs. On a 64gb machine I was able to have a 12k context with the 7B model and 2k context with the 65B model. You can change it [here](https://github.com/ggerganov/llama.cpp/blob/460c48254098b28d422382a2bbff6a0b3d7f7e17/main.cpp#L794)
 
 _Originally posted by @eous in https://github.com/ggerganov/llama.cpp/issues/71#issuecomment-1465496459_
+
+---
+
+[![Actions Status](https://github.com/ggerganov/llama.cpp/workflows/CI/badge.svg)](https://github.com/ggerganov/llama.cpp/actions)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Inference of [Facebook's LLaMA](https://github.com/facebookresearch/llama) model in pure C/C++
+
+
 
 **Hot topics:**
 
